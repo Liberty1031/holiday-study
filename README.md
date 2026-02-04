@@ -4,6 +4,11 @@
 3.计算两个整数的和
   1）.将两个变量初始化，例:int num1=0,int num2=0.
   2）.include<stdio.h>
-      int main(){
-      int num1=0
-      int nu}
+  int main(){
+  int num1 = 0;
+  int num2 = 0;
+  scanf_s("%d %d",&num1,&num2);
+  int sum = num1 + num2;
+  printf("%d\n",sum);
+	return 0;
+}
