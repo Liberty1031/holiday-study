@@ -20,4 +20,16 @@
 2.常量的类型：字面常量，const修饰的常变量，#define定义的标识符常量，const修饰的常变量，枚举常量
 例：include<stdio.h>
     int main(){
+	a=10----字面常量
+	const int a=10----常变量，但其本质还是变量，只是带有常量属性
+	#define A 100----标识符常量
+	enum SEX{MALE,FEMALE,SECRECT}----枚举常量
 	}
+2026.2.7字符串及其长度计算
+1.字符串:由双引号括起来的一串字符。例："abcd" "12345"......,字符串的打印形式为%s。
+2.字符串末尾有\0标志着字符串的结束，但在计算字符串长度的时候\0不计入长度之内。
+3.计算字符串长度的函数是strlen(),该函数的头文件为string.h
+例：char arr1[]="abcdef";
+    char arr2[]={'a','b','c','d','e','f'};
+	arr1打印出的结果为abcdef，arr2打印结果为abcdef烫烫烫烫abcdef。
+	printf("%d",)

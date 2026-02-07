@@ -1,6 +1,7 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
-	#define a 100
+	/*#define a 100*/
 //	printf("i love you!");
 //2026.2.3
 //int num1 = 0;
@@ -9,7 +10,12 @@ int main(){
 //int sum = num1 + num2;
 //printf("%d\n",sum);
 //2026.2.4//
-	int arr[a] = { 0 };
+	/*int arr[a] = { 0 };*/
 	/*printf("%d",a);*/
-	return 0;
+	char arr1[] = {'a','b','c','d','e','f'};
+	/*char arr2[] = { 'a','b','c','d' };*/
+	/*printf("%s\n", arr1);
+	printf("%s", arr2);*/
+	printf("%d", strlen(arr1));
+		return 0;
 }
