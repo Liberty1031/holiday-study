@@ -20,6 +20,7 @@
 //		return 0;
 //}
 #include<stdio.h>
+void hanwen();
 int main() {
     int a= 0;
     scanf_s("%c", &a);
@@ -29,5 +30,6 @@ int main() {
     scanf_s("%f %f", &a, &b);
     int sum = a + b;*/
     printf("%c\n", c);
+    hanwen();
     return 0;
 }
