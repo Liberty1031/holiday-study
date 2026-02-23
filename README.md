@@ -35,3 +35,13 @@
 	arr1打印出的结果为abcdef，arr2打印结果为abcdef烫烫烫烫abcdef。
 	printf("%d",strlen(arr1));    结果为6
 	printf("%d",strlen(arr2));    结果未知（因为该组数据末尾未出现\0)
+2026.2.9(洛谷题目)字母转换
+1.用到ascII表中，字母大写ascll值=小写ascll值-32；
+2.电脑只能识别数字(%d的形式输入，%c的形式输出)
+#include<stdio.h>
+int main() {
+    int a= 0;
+    scanf_s("%c", &a);
+    int c = a -32;
+	printf("%c\n", c);
+    return 0;

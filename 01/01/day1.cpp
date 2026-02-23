@@ -21,13 +21,21 @@
 //}
 #include<stdio.h>
 int main() {
-    int a= 0;
-    scanf_s("%c", &a);
-    int c = a -32;
-    /*scanf_s("%c",&ch);*/
-   /* float b = 0;
-    scanf_s("%f %f", &a, &b);
-    int sum = a + b;*/
-    printf("%c\n", c);
+   // int a= 0;
+   // scanf_s("%c", &a);
+   // int c = a -32;
+   // /*scanf_s("%c",&ch);*/
+   ///* float b = 0;
+   // scanf_s("%f %f", &a, &b);
+   // int sum = a + b;*/
+   // printf("%c\n", c);
+    for (int i = 1; i < 5; i++) {
+        for (int j = 1; j < 5; j++) {
+            for (int k = 1; k < 5; k++) {
+                if (i != j && j != k && i != k) { printf("%d\n", i * 100 + j * 10 + k * 1); }
+            }
+        }
+    };
     return 0;
+    
 }
