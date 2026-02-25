@@ -29,13 +29,23 @@ int main() {
    // scanf_s("%f %f", &a, &b);
    // int sum = a + b;*/
    // printf("%c\n", c);
-    for (int i = 1; i < 5; i++) {
-        for (int j = 1; j < 5; j++) {
-            for (int k = 1; k < 5; k++) {
-                if (i != j && j != k && i != k) { printf("%d\n", i * 100 + j * 10 + k * 1); }
-            }
-        }
-    };
+
+   ///* for (int i = 1; i < 5; i++) {
+   //     for (int j = 1; j < 5; j++) {
+   //         for (int k = 1; k < 5; k++) {
+   //             if (i != j && j != k && i != k) { printf("%d\n", i * 100 + j * 10 + k * 1); }
+   //         }
+   //     }
+   // };*/
+
+    float e = 0;
+    scanf_s("%f", &e);
+                    if (e <= 10) { printf("%f", e * 1.1 ); }
+                    if (e > 10 &&e <= 20) { printf("%f", e * 1.075 + 0.25); }
+                    if (e > 20 && e <= 40) { printf("%f", e*1.05 + 0.75); }
+                    if (e > 40 && e <= 60) { printf("%f", e * 1.03 + 1.55); }
+                    if (e > 60 && e <= 100) { printf("%f", e * 1.015 + 3.45); }
+                    if (e > 100) { printf("%f", e * 1.01 + 2.95); }
     return 0;
     
 }
