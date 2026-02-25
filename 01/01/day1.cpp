@@ -38,14 +38,26 @@ int main() {
    //     }
    // };*/
 
-    float e = 0;
-    scanf_s("%f", &e);
-                    if (e <= 10) { printf("%f", e * 1.1 ); }
-                    if (e > 10 &&e <= 20) { printf("%f", e * 1.075 + 0.25); }
-                    if (e > 20 && e <= 40) { printf("%f", e*1.05 + 0.75); }
-                    if (e > 40 && e <= 60) { printf("%f", e * 1.03 + 1.55); }
-                    if (e > 60 && e <= 100) { printf("%f", e * 1.015 + 3.45); }
-                    if (e > 100) { printf("%f", e * 1.01 + 2.95); }
+   /* double e = 0;
+    scanf_s("%lf", &e);
+                    if (e <= 10) { printf("%lf", e * 1.1 ); }
+                    if (e > 10 &&e <= 20) { printf("%lf", e * 1.075 + 0.25); }
+                    if (e > 20 && e <= 40) { printf("%lf", e*1.05 + 0.75); }
+                    if (e > 40 && e <= 60) { printf("%lf", e * 1.03 + 1.55); }
+                    if (e > 60 && e <= 100) { printf("%lf", e * 1.015 + 3.45); }
+                    if (e > 100) { printf("%lf", e * 1.01 + 2.95); }*/
+
+    int i = 0;
+    int j = 0;
+    for (i = 2; i < 85; i++) {
+        for (j = 2; j <85; j++) {
+            int a = (i-j)*(i-j) / 4 - 100;
+            if (i * j == 168&&i%2==0&&j%2==0) {
+                printf("%d\n", a
+                );
+            };
+        }        
+    };
     return 0;
     
 }
