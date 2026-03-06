@@ -66,12 +66,20 @@ int main() {
         printf("\n");
     }*/
 
-    int i, j;
+    /*int i, j;
     for (i = 1; i <= 4; i++) {
         printf("\n");
             for (j = i; j > 0; j--) {
                 printf("*");
             }
+    }*/
+
+    int i, j;
+    for (i = 1; i <= 9; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("%d*%d=%d", i, j, i * j);
+        }
+        printf("\n");
     }
         return 0;
     }
