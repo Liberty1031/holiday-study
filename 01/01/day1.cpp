@@ -47,17 +47,31 @@ int main() {
                     if (e > 60 && e <= 100) { printf("%lf", e * 1.015 + 3.45); }
                     if (e > 100) { printf("%lf", e * 1.01 + 2.95); }*/
 
-    int i = 0;
-    int j = 0;
-    for (i = 2; i < 85; i++) {
-        for (j = 2; j <85; j++) {
-            int a = (i-j)*(i-j) / 4 - 100;
-            if (i * j == 168&&i%2==0&&j%2==0) {
-                printf("%d\n", a
-                );
-            };
-        }        
-    };
-    return 0;
-    
-}
+    //int i = 0;
+    //int j = 0;
+    //for (i = 2; i < 85; i++) {
+    //    for (j = 2; j <85; j++) {
+    //        int a = (i-j)*(i-j) / 4 - 100;
+    //        if (i * j == 168&&i%2==0&&j%2==0) {
+    //            printf("%d\n", a
+    //            );
+    //        };
+    //    }        
+    //};
+
+   /* int i, j, k;
+    for (i = 1; i < 4; i++) {
+        for (j = 1; j <= 3 - i; j++) { printf(" "); }
+        for (k = 1; k <= i * 2 - 1; k++) { printf("*"); }
+        printf("\n");
+    }*/
+
+    int i, j;
+    for (i = 1; i <= 4; i++) {
+        printf("\n");
+            for (j = i; j > 0; j--) {
+                printf("*");
+            }
+    }
+        return 0;
+    }
