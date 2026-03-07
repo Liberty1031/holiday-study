@@ -21,6 +21,7 @@
 //}
 #include<stdio.h>
 int main() {
+    /*字母大小写*/
    // int a= 0;
    // scanf_s("%c", &a);
    // int c = a -32;
@@ -30,6 +31,7 @@ int main() {
    // int sum = a + b;*/
    // printf("%c\n", c);
 
+    /*由123组成的三位数*/
    ///* for (int i = 1; i < 5; i++) {
    //     for (int j = 1; j < 5; j++) {
    //         for (int k = 1; k < 5; k++) {
@@ -37,7 +39,7 @@ int main() {
    //         }
    //     }
    // };*/
-
+   /*分段利润问题*/
    /* double e = 0;
     scanf_s("%lf", &e);
                     if (e <= 10) { printf("%lf", e * 1.1 ); }
@@ -59,13 +61,15 @@ int main() {
     //    }        
     //};
 
-   /* int i, j, k;
+    /*正三角形135*/
+    /*int i, j, k;
     for (i = 1; i < 4; i++) {
         for (j = 1; j <= 3 - i; j++) { printf(" "); }
         for (k = 1; k <= i * 2 - 1; k++) { printf("*"); }
         printf("\n");
     }*/
 
+    /*直角三角形*/
     /*int i, j;
     for (i = 1; i <= 4; i++) {
         printf("\n");
@@ -74,6 +78,7 @@ int main() {
             }
     }*/
 
+   //99乘法表
    /* int i, j;
     for (i = 1; i <= 9; i++) {
         for (j = 1; j <= i; j++) {
@@ -82,7 +87,8 @@ int main() {
         printf("\n");
     }*/
 
-    int i, j, k, m, n, p;
+   //打印菱形
+   /* int i, j, k, m, n, p;
     for (i = 1; i < 4; i++) {
         for (j = 1; j <= 3 - i; j++) { printf(" "); }
         for (k = 1; k <= 2 * i - 1; k++) { printf("*"); }
@@ -92,6 +98,12 @@ int main() {
         for (n = 1; n <= m; n++) { printf(" "); }
         for (p = 1; p <= 5 - m * 2; p++) { printf("*"); }
         printf("\n");
-    }
+    }*/
+
+    int X0, Y0, r, X1, Y1;
+    scanf_s("%d,%d %d %d,%d", &X0, &Y0,&r,&X1,&Y1);
+    if (r == (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("On the circle"); }
+    if (r >= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Outside"); }
+    if (r <= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Inside"); }
         return 0;
     }
