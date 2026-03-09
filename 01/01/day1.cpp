@@ -99,11 +99,51 @@ int main() {
         for (p = 1; p <= 5 - m * 2; p++) { printf("*"); }
         printf("\n");
     }*/
+    /*判断一个数数是否为素数*/
+    //int n ;
+    //int IsPrime;
+    //scanf_s("%d",& n);
+    //    if (n <= 1) {
+    //        IsPrime = 0;
+    //    }else
+    //    if (n == 2) {
+    //        IsPrime = 1;
+    //    }else
+    //    
+    //    for (int i = 2; i*i <= n; i++) {
+    //        if (n % i == 0) { 
+    //            IsPrime = 0;
+    //            break;// 不需要else！IsPrime默认是1，没找到因数就保持1
+    //        }
+    //    }
+    //    if (IsPrime == 1) { printf("YES"); }
+    //    else { printf("NO"); }
 
-    int X0, Y0, r, X1, Y1;
-    scanf_s("%d,%d %d %d,%d", &X0, &Y0,&r,&X1,&Y1);
-    if (r == (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("On the circle"); }
-    if (r >= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Outside"); }
-    if (r <= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Inside"); }
+//转专业真题1
+//    int X0, Y0, r, X1, Y1;
+//    scanf_s("%d,%d %d %d,%d", &X0, &Y0,&r,&X1,&Y1);
+//    if (r == (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("On the circle"); }
+//    if (r >= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Outside"); }
+//    if (r <= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Inside"); }
+
+int n = 0;
+int i;
+int IsPrime=0;
+scanf_s("%d",& n);
+if (n <= 1) { 
+    IsPrime = 0; 
+}else
+if (n == 2) {
+    IsPrime = 1; 
+}else
+for (i = 2; i * i <= n; i++) {
+    if (n % i == 0) {
+        IsPrime = 0;
+    }
+    break;
+}
+if (IsPrime == 1) { printf("IS"); }
+else { printf("NO"); }
+
         return 0;
     }
