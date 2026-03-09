@@ -140,6 +140,18 @@ int main() {
     if (IsPrime == 1) { printf("IS"); }
     else { printf("NO"); }*/
 
+//将有限个数字按大小顺序排列
+//int a, b, c, d;
+//int temp;
+//scanf_s("%d %d %d %d", &a, &b, &c, &d);
+//if (a > b) { temp = a; a = b; b = temp; }
+//if (a > c) { temp = a; a = c; c = temp; }
+//if (a > d) { temp = a; a = d; d = temp; }
+//if (b > c) { temp = b; b = c; c = temp; }
+//if (b > d) { temp = b; b = d; d = temp; }
+//if (c > d) { temp = c; c = d; d = temp; }
+//printf("%d %d %d %d", a, b, c, d);
+
 //转专业真题1
 //    int X0, Y0, r, X1, Y1;
 //    scanf_s("%d,%d %d %d,%d", &X0, &Y0,&r,&X1,&Y1);
@@ -177,14 +189,44 @@ int main() {
 //}
 
 //转专业真题4
-int i, j;
-int n = 0;
-scanf_s("%d", &n);
-for (i = n; i <= n; i++) {
-    for (j = 1; j <= i; j++) {
-        printf("%dx%d=%d ", j, i, i * j);
-    }
-    printf("\n");
-}
-        return 0;
+//int i, j;
+//int n = 0;
+//scanf_s("%d", &n);
+//for (i = n; i <= n; i++) {
+//    for (j = 1; j <= i; j++) {
+//        printf("%dx%d=%d ", j, i, i * j);
+//    }
+//    printf("\n");
+//}
+
+//转专业真题5
+//int a, b, c, d;
+//int *max;
+//scanf_s("%d %d %d %d", &a, &b, &c, &d);
+//max = &a;
+//if (b > *max)max = &b;
+//if (c > *max)max = &c;
+//if (d > *max)max = &d;
+//int temp;
+//temp = a;
+//a = *max;
+//*max = temp;
+//printf("%d %d %d %d", a, b, c, d);
+int a = 0;
+int b = 0;
+int c = 0;
+int d = 0;
+int arr[4] = { a,b,c,d };
+scanf_s("%d %d %d %d", &a, &b, &c, &d);
+int max = 0;
+max=a;
+if (b> max)max = b;
+if (c> max)max = c;
+if (c> max)max = d;
+int temp;
+temp = arr[0];
+arr[0] = max;
+max = temp;
+printf("%d %d %d %d ", a, b, c, d);
+return 0;
     }
