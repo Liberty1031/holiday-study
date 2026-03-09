@@ -118,6 +118,27 @@ int main() {
     //    }
     //    if (IsPrime == 1) { printf("YES"); }
     //    else { printf("NO"); }
+    
+//判断一个数是否为素数（注意定义方法不同
+    /*int n, i;
+    int IsPrime;
+    scanf_s("%d", &n);
+    if (n <= 1) {
+        IsPrime = 0;
+    }
+    else
+        if (n == 2) {
+            IsPrime = 1;
+        }
+        else
+            for (i = 2; i * i <= n; i++) {
+                if (n % i == 0) {
+                    IsPrime = 0;
+                }
+                break;
+            }
+    if (IsPrime == 1) { printf("IS"); }
+    else { printf("NO"); }*/
 
 //转专业真题1
 //    int X0, Y0, r, X1, Y1;
@@ -125,25 +146,45 @@ int main() {
 //    if (r == (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("On the circle"); }
 //    if (r >= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Outside"); }
 //    if (r <= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Inside"); }
+ 
+// 转专业真题3
+//int IsPrime(int num) {
+//    if (num <= 1) {
+//        return 0;
+//    }
+//    if (num == 2) {
+//         return 1;
+//    }
+//    for (int i = 2; i * i <= num; i++) {
+//        if (num % i == 0) {
+//            return 0;
+//        }
+//    }return 1;
+//}
+//int main(){
+//    int n = 0;
+//scanf_s("%d",& n);
+//int count = 0;
+//int num = 2;
+//while (1) {
+//    if (IsPrime(num)) {
+//        count++;
+//    }
+//    if (n == count) {
+//        printf("%d", num);
+//        break;
+//    }num++;
+//}
 
+//转专业真题4
+int i, j;
 int n = 0;
-int i;
-int IsPrime=0;
-scanf_s("%d",& n);
-if (n <= 1) { 
-    IsPrime = 0; 
-}else
-if (n == 2) {
-    IsPrime = 1; 
-}else
-for (i = 2; i * i <= n; i++) {
-    if (n % i == 0) {
-        IsPrime = 0;
+scanf_s("%d", &n);
+for (i = n; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+        printf("%dx%d=%d ", j, i, i * j);
     }
-    break;
+    printf("\n");
 }
-if (IsPrime == 1) { printf("IS"); }
-else { printf("NO"); }
-
         return 0;
     }
