@@ -158,7 +158,24 @@ int main() {
 //    if (r == (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("On the circle"); }
 //    if (r >= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Outside"); }
 //    if (r <= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Inside"); }
- 
+
+int n, a, b;
+scanf_s("%d %d %d", &n, &a, &b);
+int total=0;
+int i;
+int x1, y1, x2, y2;
+int Xmin = 0;
+int Ymin = 0;
+for (i = 0; i < n; i++) {
+    scanf_s("%d %d %d %d", &x1, &y1, &x2, &y2);
+    if (x1 < 0) { x1 = Xmin; }
+    if (y1 < 0) { y1 = Ymin; }
+    if (x2 > a) { x2 = a; }
+    if (y2 > b) { y2 = b; }
+    total+= (x2 - x1) * (y2 - y1);
+    
+}
+printf("%d", total);
 // 转专业真题3
 //int IsPrime(int num) {
 //    if (num <= 1) {
@@ -234,27 +251,52 @@ int main() {
 //    printf("%d", arr[i]);
 //}
 
-int n, m;
-scanf_s("%d %d",&m, &n);
-int arr[100][100] = { 0 };
-int i, j;
-for (i = 0; i < m; i++) {
-    for (j = 0; j < n; j++) {
-        scanf_s("%d", &arr[i][j]);
-    }
-}
-int max = arr[0][0];
-int row = 1;
-int colum = 1;
-for (i = 0; i < m; i++) {
-    for (j = 0; j < n; j++) {
-        if (arr[i][j] > max) {
-            max=arr[i][j];
-            row = 1 + i;
-            colum = 1 + j;
-        }
-    }
-}
-printf("%d %d %d", max,row,colum);
+//转专业真题6
+//int n, m;
+//scanf_s("%d %d",&m, &n);
+//int arr[100][100] = { 0 };
+//int i, j;
+//for (i = 0; i < m; i++) {
+//    for (j = 0; j < n; j++) {
+//        scanf_s("%d", &arr[i][j]);
+//    }
+//}
+//int max = arr[0][0];
+//int row = 1;
+//int colum = 1;
+//for (i = 0; i < m; i++) {
+//    for (j = 0; j < n; j++) {
+//        if (arr[i][j] > max) {
+//            max=arr[i][j];
+//            row = 1 + i;
+//            colum = 1 + j;
+//        }
+//    }
+//}
+//printf("%d %d %d", max,row,colum);
+
+//转专业真题7
+//int n;
+//scanf_s("%d", &n);
+//int arr[260];
+//int i;
+//int j;
+//int temp;
+//for (i = 0; i < n; i++) {
+//    scanf_s("%d", &arr[i]);
+//}
+//for(i=0;i<n-1;i++){
+//    for (j = 0; j < n - 1 - i; j++) {
+//        if (arr[j] > arr[j + 1]) {
+//            temp = arr[j];
+//            arr[j] = arr[j + 1];
+//            arr[j + 1] = temp;
+//    }
+//    }
+//}
+//for (i = 0; i < n; i++) {
+//    printf("%d ", arr[n/2+1/2]);
+//    break;
+//}
 return 0;
     }
