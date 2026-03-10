@@ -237,22 +237,22 @@ int main() {
 
     int m, n;
     int i,j;
-    /*int arr[1000];
-    int max_idx = 0;*/
-    scanf_s("%d", &m,&n);
-    for (i = 1; i < m; i++) {
-        for (j = 1; j < n; j++) {
-            printf("*");
+    int arr[1005];
+    int max_idx = 0;
+    scanf_s("%d %d", &m,&n);
+    for (i = 1; i < m+1; i++) {
+        for (j = 1; j < n+1; j++) {
+            scanf_s("%d", &arr[i]);
         }
         printf("\n");
     }
-    /*for (i = 0; i < m; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 1; i < m+1; i++) {
+        for (j = 1; j < n+1; j++) {
             if (arr[i] > arr[max_idx]) {
                 i = max_idx;
             }
         }
     }
-    printf("%d %d %d",m,n, arr[max_idx]);*/
+    printf("%d %d %d",m,n, arr[max_idx]);
 return 0;
     }
