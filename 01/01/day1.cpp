@@ -199,7 +199,7 @@ int main() {
 //    printf("\n");
 //}
 
-//转专业真题5
+//转专业真题5(指针）
 //int a, b, c, d;
 //int *max;
 //scanf_s("%d %d %d %d", &a, &b, &c, &d);
@@ -212,21 +212,47 @@ int main() {
 //a = *max;
 //*max = temp;
 //printf("%d %d %d %d", a, b, c, d);
-int a = 0;
-int b = 0;
-int c = 0;
-int d = 0;
-int arr[4] = { a,b,c,d };
-scanf_s("%d %d %d %d", &a, &b, &c, &d);
-int max = 0;
-max=a;
-if (b> max)max = b;
-if (c> max)max = c;
-if (c> max)max = d;
-int temp;
-temp = arr[0];
-arr[0] = max;
-max = temp;
-printf("%d %d %d %d ", a, b, c, d);
+//int n;
+//scanf_s("%d",& n);
+//转专业真题5（无法输入n，非指针方法）
+//int arr[4];
+//int i;
+//int temp;
+//for (i = 0; i < 4; i++) {
+//    scanf_s("%d ", &arr[i]);
+//}
+//int max_idx = 0;
+//for (i = 0; i < 4; i++) {
+//    if (arr[max_idx] < arr[i]) {
+//        max_idx = i;
+//    }
+//}
+//temp = arr[0];
+//arr[0] = arr[max_idx];
+//arr[max_idx] = temp;
+//for (i = 0; i <4; i++) {
+//    printf("%d", arr[i]);
+//}
+
+
+    int m, n;
+    int i,j;
+    /*int arr[1000];
+    int max_idx = 0;*/
+    scanf_s("%d", &m,&n);
+    for (i = 1; i < m; i++) {
+        for (j = 1; j < n; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    /*for (i = 0; i < m; i++) {
+        for (j = 0; j < n; j++) {
+            if (arr[i] > arr[max_idx]) {
+                i = max_idx;
+            }
+        }
+    }
+    printf("%d %d %d",m,n, arr[max_idx]);*/
 return 0;
     }
