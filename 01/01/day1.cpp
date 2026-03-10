@@ -234,25 +234,27 @@ int main() {
 //    printf("%d", arr[i]);
 //}
 
-
-    int m, n;
-    int i,j;
-    int arr[1005];
-    int max_idx = 0;
-    scanf_s("%d %d", &m,&n);
-    for (i = 1; i < m+1; i++) {
-        for (j = 1; j < n+1; j++) {
-            scanf_s("%d", &arr[i]);
-        }
-        printf("\n");
+int n, m;
+scanf_s("%d %d",&m, &n);
+int arr[100][100] = { 0 };
+int i, j;
+for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+        scanf_s("%d", &arr[i][j]);
     }
-    for (i = 1; i < m+1; i++) {
-        for (j = 1; j < n+1; j++) {
-            if (arr[i] > arr[max_idx]) {
-                i = max_idx;
-            }
+}
+int max = arr[0][0];
+int row = 1;
+int colum = 1;
+for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+        if (arr[i][j] > max) {
+            max=arr[i][j];
+            row = 1 + i;
+            colum = 1 + j;
         }
     }
-    printf("%d %d %d",m,n, arr[max_idx]);
+}
+printf("%d %d %d", max,row,colum);
 return 0;
     }
