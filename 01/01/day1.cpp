@@ -119,7 +119,7 @@ int main() {
     //    if (IsPrime == 1) { printf("YES"); }
     //    else { printf("NO"); }
     
-//判断一个数是否为素数（注意定义方法不同
+//判断一个数是否为素数（注意for循环中对i的定义方法不同
     /*int n, i;
     int IsPrime;
     scanf_s("%d", &n);
@@ -140,6 +140,24 @@ int main() {
     if (IsPrime == 1) { printf("IS"); }
     else { printf("NO"); }*/
 
+//冒泡排序的基本形式
+//#include<stdio.h>
+//int main() {
+//    int i, j;
+//    int temp;
+//    int arr[1005];
+//    for (i = 0; i < n - 1; i++) {
+//        for (j = 0; j < n - 1 - i; j++) {
+//            if (arr[j] > arr[j + 1]) {
+//                temp = arr[j];
+//                arr[j] = arr[j + 1];
+//                arr[j + 1] = temp;
+//            }
+//        }
+//    }
+//    printf("%d", arr[j]);
+//}
+
 //将有限个数字按大小顺序排列
 //int a, b, c, d;
 //int temp;
@@ -158,24 +176,25 @@ int main() {
 //    if (r == (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("On the circle"); }
 //    if (r >= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Outside"); }
 //    if (r <= (X1 - X0) * (X1 - X0) + (Y1 - Y0) * (Y1 - Y0)) { printf("Inside"); }
-
-int n, a, b;
-scanf_s("%d %d %d", &n, &a, &b);
-int total=0;
-int i;
-int x1, y1, x2, y2;
-int Xmin = 0;
-int Ymin = 0;
-for (i = 0; i < n; i++) {
-    scanf_s("%d %d %d %d", &x1, &y1, &x2, &y2);
-    if (x1 < 0) { x1 = Xmin; }
-    if (y1 < 0) { y1 = Ymin; }
-    if (x2 > a) { x2 = a; }
-    if (y2 > b) { y2 = b; }
-    total+= (x2 - x1) * (y2 - y1);
-    
-}
-printf("%d", total);
+// 
+//转专业真题2（注意最后“total+=”处的格式）
+//int n, a, b;
+//scanf_s("%d %d %d", &n, &a, &b);
+//int total=0;
+//int i;
+//int x1, y1, x2, y2;
+//int Xmin = 0;
+//int Ymin = 0;
+//for (i = 0; i < n; i++) {
+//    scanf_s("%d %d %d %d", &x1, &y1, &x2, &y2);
+//    if (x1 < 0) { x1 = Xmin; }
+//    if (y1 < 0) { y1 = Ymin; }
+//    if (x2 > a) { x2 = a; }
+//    if (y2 > b) { y2 = b; }
+//    total+= (x2 - x1) * (y2 - y1);
+//}
+//printf("%d", total);
+// 
 // 转专业真题3
 //int IsPrime(int num) {
 //    if (num <= 1) {
@@ -232,24 +251,26 @@ printf("%d", total);
 //int n;
 //scanf_s("%d",& n);
 //转专业真题5（无法输入n，非指针方法）
-//int arr[4];
-//int i;
-//int temp;
-//for (i = 0; i < 4; i++) {
-//    scanf_s("%d ", &arr[i]);
-//}
-//int max_idx = 0;
-//for (i = 0; i < 4; i++) {
-//    if (arr[max_idx] < arr[i]) {
-//        max_idx = i;
-//    }
-//}
-//temp = arr[0];
-//arr[0] = arr[max_idx];
-//arr[max_idx] = temp;
-//for (i = 0; i <4; i++) {
-//    printf("%d", arr[i]);
-//}
+int arr[1005];
+int i;
+int temp;
+int n=0;
+scanf_s("%d",&n);
+for (i = 0; i < n; i++) {
+    scanf_s("%d", &arr[i]);
+}
+int max_idx = 0;
+for (i = 0; i < n; i++) {
+    if (arr[max_idx] < arr[i]) {
+        max_idx = i;
+    }
+}
+temp = arr[0];
+arr[0] = arr[max_idx];
+arr[max_idx] = temp;
+for (i = 0; i <n; i++) {
+    printf("%d", arr[i]);
+}
 
 //转专业真题6
 //int n, m;
@@ -298,5 +319,8 @@ printf("%d", total);
 //    printf("%d ", arr[n/2+1/2]);
 //    break;
 //}
+//转专业试题（重做）
+//3.
+
 return 0;
     }
