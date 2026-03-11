@@ -394,25 +394,69 @@ int main() {
 //}
 
 //5.
+//int n = 0;
+//int arr[1005];
+//scanf_s("%d", &n);
+//int i;
+//for (i = 0; i < n; i++) {
+//    scanf_s("%d", &arr[i]);
+//}
+//int max_idx = 0;
+//int temp;
+//for (i = 0; i < n; i++) {
+//    if (arr[i] > arr[max_idx]) {
+//        max_idx = i;
+//        temp = arr[0];
+//        arr[0] = arr[max_idx];
+//        arr[max_idx] = temp;
+//    }
+//}
+//for (i = 0; i < n; i++) {
+//    printf("%d", arr[i]);
+//}
+
+//6.
+//int arr[100][100] = { 0 };
+//int m, n;
+//int i, j;
+//scanf_s("%d %d", &m, &n);
+//for (i = 1; i <= m; i++) {
+//    for (j = 1; j <= n; j++) {
+//        scanf_s("%d", &arr[i][j]);
+//    }
+//}
+//int p = 0;
+//int q = 0;
+//int max=arr[0][0];
+//for (i = 1; i <=m; i++) {
+//    for (j = 1; j <= n; j++) {
+//        if (arr[i][j] > max) {
+//            max = arr[i][j];
+//            p = i ;
+//            q = j ;
+//        }
+//    }
+//}
+//printf("%d %d %d", max, p, q);
+
+//7.
 int n = 0;
-int arr[1005];
-scanf_s("%d", &n);
 int i;
+scanf_s("%d", &n);
+int arr[260] = { 0 };
 for (i = 0; i < n; i++) {
     scanf_s("%d", &arr[i]);
 }
-int max_idx = 0;
-int temp;
-for (i = 0; i < n; i++) {
-    if (arr[i] > arr[max_idx]) {
-        max_idx = i;
-        temp = arr[0];
-        arr[0] = arr[max_idx];
-        arr[max_idx] = temp;
+for (i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+            int temp;
+            temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
     }
 }
-for (i = 0; i < n; i++) {
-    printf("%d", arr[i]);
-}
+printf("%d", arr[n / 2 + 1 / 2]);
 return 0;
     }
