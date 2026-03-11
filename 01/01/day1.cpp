@@ -170,6 +170,15 @@ int main() {
 //if (c > d) { temp = c; c = d; d = temp; }
 //printf("%d %d %d %d", a, b, c, d);
 
+//输入整数a，b，输出b个a相乘.
+//int a = 0;
+//int b = 0;
+//int c = 1;
+//scanf_s("%d %d",&a, &b);
+//for (int i = 0; i < b; i++) {
+//    c *= a;
+//}
+//printf("%d", c);
 //转专业真题1
 //    int X0, Y0, r, X1, Y1;
 //    scanf_s("%d,%d %d %d,%d", &X0, &Y0,&r,&X1,&Y1);
@@ -250,27 +259,27 @@ int main() {
 //printf("%d %d %d %d", a, b, c, d);
 //int n;
 //scanf_s("%d",& n);
-//转专业真题5（无法输入n，非指针方法）
-int arr[1005];
-int i;
-int temp;
-int n=0;
-scanf_s("%d",&n);
-for (i = 0; i < n; i++) {
-    scanf_s("%d", &arr[i]);
-}
-int max_idx = 0;
-for (i = 0; i < n; i++) {
-    if (arr[max_idx] < arr[i]) {
-        max_idx = i;
-    }
-}
-temp = arr[0];
-arr[0] = arr[max_idx];
-arr[max_idx] = temp;
-for (i = 0; i <n; i++) {
-    printf("%d", arr[i]);
-}
+//转专业真题5（非指针方法--索引）
+//int arr[1005];
+//int i;
+//int temp;
+//int n=0;
+//scanf_s("%d",&n);
+//for (i = 0; i < n; i++) {
+//    scanf_s("%d", &arr[i]);
+//}
+//int max_idx = 0;
+//for (i = 0; i < n; i++) {
+//    if (arr[max_idx] < arr[i]) {
+//        max_idx = i;
+//    }
+//}
+//temp = arr[0];
+//arr[0] = arr[max_idx];
+//arr[max_idx] = temp;
+//for (i = 0; i <n; i++) {
+//    printf("%d", arr[i]);
+//}
 
 //转专业真题6
 //int n, m;
@@ -320,7 +329,68 @@ for (i = 0; i <n; i++) {
 //    break;
 //}
 //转专业试题（重做）
-//3.
+//1.
+//int x0 = 0;
+//int y0 = 0;
+//int r = 0;
+//int x1 = 0;
+//int y1 = 0;
+//scanf_s("%d %d %d %d %d", &x0, &y0, &r, &x1, &y1);
+//if ((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) > r * r) {printf("Outside");}
+//if ((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) == r * r) { printf("On the Circle"); }
+//if ((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) < r * r) { printf("Inside"); }
 
+//2.
+//int a, b, n;
+//int x1, y1, x2, y2;
+//int i = 0;
+//scanf_s("%d %d %d", &n, &a, &b);
+//int minx = 0;
+//int miny = 0;
+//int total = 0;
+//for (i = 0; i < n; i++) {
+//    scanf_s("%d %d %d %d", &x1, &y1, &x2, &y2);
+//    if (x1 <= 0) { x1 = minx; }
+//    if (y1 <= 0) { y1 = miny; }
+//    if (x2 > a) { x2 = a; }
+//    if (y2 > b) { y2 = b; }
+//      total += (x2 - x1) * (y2 - y1);
+//}
+//printf("%d", total);
+
+//3.
+//int isPrime(int num) {
+//    if (num <= 1) { return 0; }
+//    if (num == 2) { return 1; }
+//    for (int i = 2; i * i <= num; i++) {
+//        if (num % i == 0) { return 0; }
+//    }return 1;
+//}
+//int main(){
+//    int count=0;
+//    int n;
+//    int num = 2;
+//    scanf_s("%d", &n);
+//    while (1) {
+//        if (isPrime(num)) {
+//            count++;
+//        }
+//        if (count == n) {
+//            printf("%d", num);
+//            break;
+//        }
+//        num++;
+//    }
+
+//4.
+int i, j;
+int n = 0;
+scanf_s("%d", &n);
+for (i = n; i <=n; i++) {
+    for (j = 1; j <= i; j++) {
+        printf("%dx%d=%d ", j,i,i*j);
+    }
+    printf("\n");
+}
 return 0;
     }
