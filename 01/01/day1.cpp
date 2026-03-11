@@ -383,14 +383,36 @@ int main() {
 //    }
 
 //4.
-int i, j;
+//int i, j;
+//int n = 0;
+//scanf_s("%d", &n);
+//for (i = n; i <=n; i++) {
+//    for (j = 1; j <= i; j++) {
+//        printf("%dx%d=%d ", j,i,i*j);
+//    }
+//    printf("\n");
+//}
+
+//5.
 int n = 0;
+int arr[1005];
 scanf_s("%d", &n);
-for (i = n; i <=n; i++) {
-    for (j = 1; j <= i; j++) {
-        printf("%dx%d=%d ", j,i,i*j);
+int i;
+for (i = 0; i < n; i++) {
+    scanf_s("%d", &arr[i]);
+}
+int max_idx = 0;
+int temp;
+for (i = 0; i < n; i++) {
+    if (arr[i] > arr[max_idx]) {
+        max_idx = i;
+        temp = arr[0];
+        arr[0] = arr[max_idx];
+        arr[max_idx] = temp;
     }
-    printf("\n");
+}
+for (i = 0; i < n; i++) {
+    printf("%d", arr[i]);
 }
 return 0;
     }

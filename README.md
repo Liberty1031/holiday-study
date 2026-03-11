@@ -99,3 +99,64 @@ int main() {
 temp = arr[0];
 arr[0] = arr[max_idx];
 arr[max_idx] = temp;
+
+
+定义函数
+一、完整结构：
+返回值类型 函数名(参数类型1 参数名1, 参数类型2 参数名2, ...) {
+    // 函数体：要执行的代码逻辑（比如计算、输出、循环等）
+    [return 返回值;] // 无返回值时，这行省略，且返回值类型写void
+}
+二、定义函数的常见类型
+1.无参数、无返回值（只执行操作，比如打印）
+// 定义：打印欢迎语，无输入、无输出
+void print_welcome(void) { // void表示无返回值，(void)表示无参数
+    printf("欢迎学习C语言函数！\n");
+    // 无return语句（void类型不需要）
+}
+// 调用（在main中使用这个函数）
+int main() {
+    print_welcome(); // 直接写函数名+()即可调用
+    return 0;
+}
+2.有参数、有返回值（核心场景，比如求和）
+// 定义：求两个整数的和，输入2个int，返回int结果
+int get_sum(int a, int b) { // 参数：2个int型输入；返回值：int型
+    int sum = a + b; // 函数体：计算求和
+    return sum;      // 返回计算结果（类型和int匹配）
+}
+
+// 调用
+int main() {
+    int x = 5, y = 3;
+    // 调用函数，接收返回值
+    int result = get_sum(x, y); 
+    printf("和为：%d\n", result); // 输出8
+    return 0;
+}
+3.无参数、有返回值（比如获取固定值）
+// 定义：返回圆周率（简化版），无输入，返回float
+float get_pi(void) {
+    return 3.14159; // 返回浮点型结果
+}
+
+// 调用
+int main() {
+    float pi = get_pi();
+    printf("圆周率：%.2f\n", pi); // 输出3.14
+    return 0;
+}
+4.有参数、无返回值（比如打印指定次数的内容）
+// 定义：打印n次“Hello”，输入int型次数，无输出
+void print_hello(int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Hello\n");
+    }
+}
+
+// 调用
+int main() {
+    print_hello(2); // 输入参数2，打印2次Hello
+    return 0;
+}
+
