@@ -330,133 +330,19 @@ int main() {
 //}
 //转专业试题（重做）
 //1.
-//int x0 = 0;
-//int y0 = 0;
-//int r = 0;
-//int x1 = 0;
-//int y1 = 0;
-//scanf_s("%d %d %d %d %d", &x0, &y0, &r, &x1, &y1);
-//if ((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) > r * r) {printf("Outside");}
-//if ((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) == r * r) { printf("On the Circle"); }
-//if ((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) < r * r) { printf("Inside"); }
-
-//2.
-//int a, b, n;
-//int x1, y1, x2, y2;
-//int i = 0;
-//scanf_s("%d %d %d", &n, &a, &b);
-//int minx = 0;
-//int miny = 0;
-//int total = 0;
-//for (i = 0; i < n; i++) {
-//    scanf_s("%d %d %d %d", &x1, &y1, &x2, &y2);
-//    if (x1 <= 0) { x1 = minx; }
-//    if (y1 <= 0) { y1 = miny; }
-//    if (x2 > a) { x2 = a; }
-//    if (y2 > b) { y2 = b; }
-//      total += (x2 - x1) * (y2 - y1);
-//}
-//printf("%d", total);
-
-//3.
-//int isPrime(int num) {
-//    if (num <= 1) { return 0; }
-//    if (num == 2) { return 1; }
-//    for (int i = 2; i * i <= num; i++) {
-//        if (num % i == 0) { return 0; }
-//    }return 1;
-//}
-//int main(){
-//    int count=0;
-//    int n;
-//    int num = 2;
-//    scanf_s("%d", &n);
-//    while (1) {
-//        if (isPrime(num)) {
-//            count++;
-//        }
-//        if (count == n) {
-//            printf("%d", num);
-//            break;
-//        }
-//        num++;
-//    }
-
-//4.
-//int i, j;
-//int n = 0;
-//scanf_s("%d", &n);
-//for (i = n; i <=n; i++) {
-//    for (j = 1; j <= i; j++) {
-//        printf("%dx%d=%d ", j,i,i*j);
-//    }
-//    printf("\n");
-//}
-
-//5.
-//int n = 0;
-//int arr[1005];
-//scanf_s("%d", &n);
-//int i;
-//for (i = 0; i < n; i++) {
-//    scanf_s("%d", &arr[i]);
-//}
-//int max_idx = 0;
-//int temp;
-//for (i = 0; i < n; i++) {
-//    if (arr[i] > arr[max_idx]) {
-//        max_idx = i;
-//        temp = arr[0];
-//        arr[0] = arr[max_idx];
-//        arr[max_idx] = temp;
-//    }
-//}
-//for (i = 0; i < n; i++) {
-//    printf("%d", arr[i]);
-//}
-
-//6.
-//int arr[100][100] = { 0 };
-//int m, n;
-//int i, j;
-//scanf_s("%d %d", &m, &n);
-//for (i = 1; i <= m; i++) {
-//    for (j = 1; j <= n; j++) {
-//        scanf_s("%d", &arr[i][j]);
-//    }
-//}
-//int p = 0;
-//int q = 0;
-//int max=arr[0][0];
-//for (i = 1; i <=m; i++) {
-//    for (j = 1; j <= n; j++) {
-//        if (arr[i][j] > max) {
-//            max = arr[i][j];
-//            p = i ;
-//            q = j ;
-//        }
-//    }
-//}
-//printf("%d %d %d", max, p, q);
-
-//7.
-int n = 0;
-int i;
-scanf_s("%d", &n);
-int arr[260] = { 0 };
-for (i = 0; i < n; i++) {
-    scanf_s("%d", &arr[i]);
-}
-for (i = 0; i < n - 1; i++) {
-    for (int j = 0; j < n - 1 - i; j++) {
-        if (arr[j] > arr[j + 1]) {
-            int temp;
-            temp = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = temp;
+//c语言经典100道
+//1.
+int i, j, k;
+for (i = 1; i <= 4; i++) {
+    for (j = 1; j <= 4; j++) {
+        for (k = 1; k <= 4; k++) {
+            if (i != j && i != k && j != k) {
+                printf("%d %d %d \n", i,j,k);
+            }
         }
+        
     }
+   
 }
-printf("%d", arr[n / 2 + 1 / 2]);
 return 0;
     }
