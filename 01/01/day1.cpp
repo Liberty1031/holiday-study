@@ -20,7 +20,7 @@
 //		return 0;
 //}
 #include<stdio.h>
-int main() {
+//int main() {
     /*字母大小写*/
    // int a= 0;
    // scanf_s("%c", &a);
@@ -172,12 +172,12 @@ int main() {
 //输入整数a，b，输出b个a相乘.
 //int a = 0;
 //int b = 0;
-//int c = 1;
+//int result = 1;
 //scanf_s("%d %d",&a, &b);
 //for (int i = 0; i < b; i++) {
-//    c *= a;
+//    result *= a;
 //}
-//printf("%d", c);
+//printf("%d",result );
 //转专业真题1
 //    int X0, Y0, r, X1, Y1;
 //    scanf_s("%d,%d %d %d,%d", &X0, &Y0,&r,&X1,&Y1);
@@ -433,28 +433,28 @@ int main() {
 //}
 //printf("%d %d %d", row, colum, max);
 // 7.
-int n;
-scanf_s("%d", &n);
-int i = 0;
-int arr[1005] = { 0 };
-for (i = 0; i < n; i++) {
-    scanf_s("%d", &arr[i]);
-}
-int j = 0;
-int temp = 0;
-for (i = 0; i < n - 1; i++) {
-    for (j = 0; j < n - 1 - i; j++) {
-        if (arr[j] > arr[j + 1]) {
-            temp = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = temp;
-        }
-    }
-}
-for (i = 0; i < n; i++) {
-    printf("%d", arr[n / 2]);
-    break;
-}
+//int n;
+//scanf_s("%d", &n);
+//int i = 0;
+//int arr[1005] = { 0 };
+//for (i = 0; i < n; i++) {
+//    scanf_s("%d", &arr[i]);
+//}
+//int j = 0;
+//int temp = 0;
+//for (i = 0; i < n - 1; i++) {
+//    for (j = 0; j < n - 1 - i; j++) {
+//        if (arr[j] > arr[j + 1]) {
+//            temp = arr[j];
+//            arr[j] = arr[j + 1];
+//            arr[j + 1] = temp;
+//        }
+//    }
+//}
+//for (i = 0; i < n; i++) {
+//    printf("%d", arr[n / 2]);
+//    break;
+//}
 //c语言经典100道
 //1.
 //int i, j, k;
@@ -503,5 +503,18 @@ for (i = 0; i < n; i++) {
 //    if (b == 11) { printf("%d", 304 + c); }
 //    if (b == 12) { printf("%d", 334 + c); }
 //}
-return 0;
+void fun(int n) {
+    int arr[1005] = { 0 };
+    for (int i = 0; i < n; i++) {
+        scanf_s("%d", &arr[i]);
+    }
+    for (int i = n-1; i >= 0; i--) {
+        printf("%d", arr[i]);
+    }
+}
+int main(){
+    int n = 0;
+    scanf_s("%d", &n);
+    fun(n);
+    return 0;
     }
